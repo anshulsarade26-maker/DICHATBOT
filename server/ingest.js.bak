@@ -1,0 +1,80 @@
+﻿/*
+ server/ingest.js - TF-IDF ingest (ESM)
+ Builds tf-idf vectors from .txt/.md files in ingest_data and writes db/vectors.json
+*/
+import fs from "fs";
+import path from "path";
+
+function tokenize(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function buildTf(tokens) {
+  const tf = {};
+  for (const t of tokens) tf[t] = (tf[t] || 0) + 1;
+  const len = tokens.length || 1;
+  for (const k of Object.keys(tf)) tf[k] = tf[k] / len;
+  return tf;
+}
+
+async function run() {
+  const docsDir = path.resolve("./ingest_data");
+  if (!fs.existsSync(docsDir)) {
+    console.error("ingest_data folder not found:", docsDir);
+    return;
+  }
+
+  const files = fs.readdirSync(docsDir).filter(f => f.endsWith(".txt") || f.endsWith(".md"));
+  if (files.length === 0) {
+    console.log("No .txt or .md files found in ingest_data. Add files and run ingest again.");
+    return;
+  }
+
+  const docs = [];
+  const docFreq = {};
+
+  for (const f of files) {
+    const txt = fs.readFileSync(path.join(docsDir, f), "utf8");
+    const words = txt.split(/\s+/).filter(Boolean);
+    let i = 0, part = 0;
+    while (i < words.length) {
+      const chunkWords = words.slice(i, i + 400);
+      const text = chunkWords.join(" ");
+      const tokens = tokenize(text);
+      const tf = buildTf(tokens);
+      const id = `${f}#${part++}`;
+      const seen = new Set(tokens);
+      for (const t of seen) docFreq[t] = (docFreq[t] || 0) + 1;
+      docs.push({ id, text, tokens, tf });
+      i += 400;
+    }
+    if (words.length === 0) {
+      const id = `${f}#0`;
+      docs.push({ id, text: "", tokens: [], tf: {} });
+    }
+  }
+
+  const N = docs.length;
+  const idf = {};
+  for (const [tok, df] of Object.entries(docFreq)) {
+    idf[tok] = Math.log(1 + (N / (1 + df)));
+  }
+
+  const out = docs.map(d => {
+    const tfidf = {};
+    for (const [tok, tfv] of Object.entries(d.tf || {})) {
+      tfidf[tok] = tfv * (idf[tok] ?? Math.log(1 + N));
+    }
+    return { id: d.id, text: d.text, tfidf, idf };
+  });
+
+  fs.mkdirSync("./db", { recursive: true });
+  fs.writeFileSync("./db/vectors.json", JSON.stringify(out, null, 2), "utf8");
+  console.log("wrote db/vectors.json", out.length, "entries");
+}
+
+run().catch(e => { console.error("ingest failed:", e); process.exit(1); });

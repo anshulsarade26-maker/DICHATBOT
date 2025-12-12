@@ -1,0 +1,189 @@
+﻿Que: What is DI?
+Ans: DI stands for Demand Integrate, a B2B Demand Growth Platform. It helps businesses grow both local and international demand for their products and services across industry verticals, delivering improved ROI (Return on Investment).
+
+Que: how to create campaign / Create Campaign flow
+Ans: Follow these steps to create a campaign:
+1. Login with your Agency Commercial role.
+2. Go to the CAMPAIGN menu.
+3. Click on Create Campaign.
+4. Click on Create Campaign In Detail.
+5. On the "Welcome to Create Campaign" page, click "Let’s Create Campaign" to begin the setup.
+6. Fill Campaign Basic Details and click Save and Next.
+   - Enter Start Date as current or future date (not a past date).
+   - Enter First Lead Delivery Date as current date or a date later than the start date.
+7. Fill Delivery Option Details (e.g., Monthly Lead Allocation) and click Save and Next.
+8. Fill Campaign Specification Details and click Save and Next.
+9. Fill Custom Questions and click Save and Next (or Skip And Next).
+10. Supporting Documents: upload supporting asset files, ABM, suppression/exclusion files, or other documents. Optionally enable "Multitouch Required Campaign".
+11. DI QA: toggle DI QA as required for delivery format and QA review.
+12. Click Save and Finish. The campaign will be created successfully and you will receive a Campaign ID.
+
+Que: how to add advertiser?
+Ans: To add an advertiser:
+1. Login using your Agency Commercial role.
+2. Go to the ADVERTISER menu.
+3. Click on "Add Advertiser".
+4. Fill in required details:
+   - ID: must be a four-digit number.
+   - Name: accepts alphanumeric values.
+5. Click the Add button.
+6. The new advertiser will be successfully added and will appear on the Create Campaign page where applicable.
+
+Que: how can I add a user in Agency Login ?
+Ans: Add User steps in Agency Login (Settings):
+1. Go to Agency Login → Settings → Add User.
+2. Make sure the User Name is an email and it is valid.
+3. Choose role(s) to grant access (e.g., Quality Assurance).
+4. Fill First Name and Last Name.
+5. Click Submit.
+6. You should see a popup: "User Added Successfully". Click OK to refresh the page.
+7. The added user will appear in the users table below.
+8. The user receives an email with login ID and password, and can log in to the same Agency using those credentials.
+
+Que: how to upload suppression file ?
+Ans: To upload a suppression file:
+1. Login to Agency account, go to Settings → Upload common suppression.
+2. Select Advertiser from the dropdown (select the advertiser whose campaign you want to apply suppression to).
+3. Select the Campaign (campaigns mapped to the selected advertiser will be shown).
+4. Upload the suppression file (file contains email addresses).
+5. Click Submit.
+6. The uploaded suppression file will be applied to the selected campaign and will appear in the campaign specification page.
+
+Que: DI is not working?
+Ans: If DI is not working, try:
+1. Check your internet connection and DNS.
+2. Clear browser cookies and cache.
+3. Open the DI site in an incognito/private window.
+4. Try a different browser or device.
+5. If issue persists, collect error details (URL, error message, screenshots) and message the DI support team with campaign ID, user ID, and timestamp.
+
+Que: how to create customize mapping?
+Ans: If no mapping exists for the selected advertiser:
+1. The user selects the advertiser.
+2. Fills in Format 1 fields.
+3. Clicks Submit Mapping to save.
+
+Que: what is DI QA button
+Ans:If DI QA is  “ON”:
+When user creates a campaign then it allocates Lead and that Lead goes to Publisher’s side.
+After Publisher reviews this, then Lead goes to DI QA.
+
+If DI QA is “OFF”:
+When DI QA is “OFF” then Lead sends to Agency.
+
+Que: offline Lead Review
+Ans: If user want to upload the offline lead status then he can download all the leads in excel format by clicking on download leads button.
+After downloading the leads on the lead file status will be DIQA review.
+After download the leads user can update the status ‘DI QA ACCEPTED’ or ‘DI QA REJTECTED’ in status column in leads file.
+After update the status user can upload the lead status file for DIQA accept or DIQA reject the leads.
+
+Que: online Lead Review
+Ans: If user want to upload the online lead status then he can select the option ‘DI QA ACCEPTED’ or ‘DI QA REJTECTED’ in status column in leads
+After selecting the status user can upload the lead status by clicking on submit button.
+
+Que: how to create rfp?
+Ans:
+RFP stands for Request for Proposal. Agency creates a campaign by filling required details and sends it to multiple publishers. Publishers bid on the campaign and the agency reviews the bids.
+To create an RFP, click Create New RFP under the RFP menu.
+The Create RFP page has three sections:
+A. Basic details
+B. Country/Region
+C. Supporting Document
+
+A. Basic details include: Bidding type, duration type, campaign type, campaign name, start/end date, bidding date, max lead available, targeted CPL, net CPL, rate card CPL, campaign currency, marketing channel, number of custom questions, employee size, industry, job level, job function, revenue, job title, and other specifications.
+
+B. Country/Region includes country and region fields.
+
+C. Supporting Document includes uploading ABM, Suppression, Exclusion, and other documents.
+
+Mandatory fields: bidding type, campaign name, start date, end date, bidding closes, max lead available, CPL, campaign currency, country-region.
+
+After submitting, a popup shows “RFP created successfully” and clicking OK navigates to Existing RFP page.
+
+Que: what is the existing rfp section used for?
+Ans:
+Selecting the Existing RFP option displays all the created RFPs.
+It shows campaign names (clickable) and actions.
+Clicking a campaign name opens full campaign details.
+A chat box is available for Agency–Publisher communication.
+
+Que: how does the Publisher see RFP and submit bids?
+Ans:
+When the agency sends an RFP to publishers, it appears under the Bidding section for the publisher.
+Displayed fields include Proposal ID, campaign name, dates, bidding close date, marketing channel, campaign type, documents, and download options.
+
+Publisher clicks Acknowledge, fills table details (country, monthly leads, total leads, daily lead, CPL, marketing channel, notes), and submits the bid.
+After submitting, publisher navigates to RFP Details.
+
+Que: what is rfp details?
+Ans:
+Under the Campaign menu, publishers can see all submitted RFPs.
+Filtering options are available for geo-wise RFPs (country filter and leads filter).
+Clicking a campaign name shows submitted bidding details.
+Clear Filter resets all filter values.
+
+Que: how does the agency see rfp bidding?
+Ans:
+When publishers submit bids, they appear under the RFP → Bidding section for the agency.
+Agency views: campaign name, start/end date, bidding close date, marketing channel, campaign type, geo-location, conversation criteria, and documents.
+
+Agency can accept bids by checking the Action checkbox which accepts all bids.
+
+Que:what is rfp?
+Ans:
+Under the RFP menu, selecting RFP Analysis opens the RFP Response Analysis page.
+If no bids are submitted, the table remains empty.
+Once bids exist, clicking the campaign name shows detailed bidding data.
+Three filters are available:
+– Country (for geo-wise RFPs)
+– Leads
+– CPL
+
+Clear Filter resets default values.
+
+Que: what is customize mapping?
+Ans:
+customize mapping is a functionality applied by client name. it allows customizing the name of fields. once applied, these customized field names will appear in the campaign specification as well as in the lead delivery template file.
+by clicking on the customize mapping option, the user navigates to the customize mapping page. this page contains a dropdown to select the advertiser and another dropdown to select the format of the customize mapping. a table is also displayed to show or edit the customize mapping.
+
+Que: how does selecting an advertiser work in customize mapping?
+Ans:
+when the user selects an advertiser, if any customize mapping already exists for that advertiser, then the data for that advertiser (format 1) is displayed.
+if it is the first time creating customize mapping, the user must fill format 1 and click the submit mapping button.
+
+Que: how to add a new customize mapping when one already exists?
+Ans: if customize mapping already exists, the user selects the advertiser, then selects the last available format in the format dropdown, fills the details in the textboxes, and clicks submit mapping.
+the user may fill values only for fields they want to customize.
+
+Que: where can we apply customize mapping in the system?
+Ans:
+customize mapping can be applied during create campaign flow and edit campaign functionality.
+if no format is created in customize mapping, then the checkbox in create/edit flow is disabled.
+
+Que: how to apply customize mapping during campaign creation?
+Ans:
+in step 2.2 of the create campaign flow, a checkbox is available in the delivery format section. by checking this checkbox, the selected customize format can be applied.
+
+note: if the user adds multiple phone formats for different countries while creating customize mapping, and later selects only one country during campaign creation, then only that specific country’s phone format will appear in the lead delivery template and campaign specification.
+
+Que: how to view customize mapping format?
+Ans: near the customize mapping checkbox, there is a small plus (+) button. clicking this opens a popup showing the customize mapping values.
+
+Que: how to apply customize mapping using the edit campaign flow?
+Ans: in step 2.2 of the edit flow, the delivery format section shows the customize mapping option.
+the user can change the applied format or add a new customized mapping.
+after clicking save and finish, the customize mapping gets applied to that campaign.
+
+Que: where will the applied customize mapping be shown?
+Ans:
+once applied, customize mapping appears in:
+– the campaign specification
+– the pdf
+– the lead file
+
+this ensures the customized field names are reflected everywhere necessary.
+
+Que: how to change password?
+Ans:change password — this facility is provided for the logged in user in case he received his login details with a system generated password through mail or if the user wants to change the common password.
+navigate to settings → change password.
+password should be having below mandatory contents-otherwise system will not accept the new password.
